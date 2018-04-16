@@ -91,8 +91,8 @@ class CircleChanger(object):
         # makes the animations go N times SLOWER.
         # --------------------------------------------------------------
 
-        ################################################################
-        # TODO: 2.
+        ###############################################################
+        # DONE: 2.
         #   First, READ the doc-string (specification) above.
         #   Second, READ the   run_test_init   function (below).
         #   Third, implement and test this method.
@@ -202,7 +202,7 @@ class CircleChanger(object):
             :type point: rg.Point
         """
         ################################################################
-        # TODO: 3.
+        # Done: 3.
         #   First, READ the doc-string (specification) above.
         #   Second, READ the   run_test_get_distance_from   function
         #   (below).  Third, implement and test this method.
@@ -211,6 +211,11 @@ class CircleChanger(object):
         #   of the    rg.Point     class to compute this distance.
         #   NO CREDIT if you use the distance formula here.
         ################################################################
+        import math
+
+        distance = math.hypot(self.circle.center.x - point.x, self.circle.center.y - point.y)
+        return distance
+
 
     def swell_or_shrink_once(self, amount_to_swell_or_shrink):
         """
